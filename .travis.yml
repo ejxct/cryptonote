@@ -2,6 +2,6 @@
   "language": "c",
   "group": "stable",
   "dist": "precise",
-  "script": "brew install autoconf automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf libevent"
+  "script": "brew install autoconf automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf libevent",
   "os": "osx"
 }
