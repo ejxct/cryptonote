@@ -11,7 +11,8 @@
          - cmake
   before_install: 
             - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew upgrade autoconf automake berkeley-db4 libtool miniupnpc openssl protobuf; fi
-            - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get upgrade bind9-host dnsutils libapt-inst2.0 libapt-pkg5.0 libbind9-80 libdns81 libfreetype6 libfreetype6-dev libisc83 libisccc80 libisccfg82 liblwres80 libpq-dev libpq5 libxml2 libxml2-dev libxml2-utils libxslt1-dev libxslt1.1  makedev oracle-java8-installer oracle-java8-set-default postgresql-9.2  postgresql-9.3 postgresql-9.4 postgresql-9.5 postgresql-client  postgresql-client-9.2 postgresql-client-9.3 postgresql-client-9.4  postgresql-client-9.5 postgresql-client-9.6 postgresql-client-common  postgresql-common postgresql-contrib-9.2 postgresql-contrib-9.3  postgresql-contrib-9.4 postgresql-contrib-9.5 unattended-upgrades update-manager-core; fi
+            - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-mark hold riak; fi
+            - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get upgrade; fi
   script:
             make
   os: 
