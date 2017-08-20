@@ -10,7 +10,9 @@
          - clang
          - cmake
   before_install: 
-            - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew upgrade autoconf automake berkeley-db4 libtool miniupnpc openssl protobuf 
+            - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew upgrade autoconf automake berkeley-db4 libtool miniupnpc openssl protobuf; fi 
   script:
             make
-  os: osx
+  os: 
+     - osx
+     - linux
