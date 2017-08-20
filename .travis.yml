@@ -4,7 +4,8 @@
 
   dist: precise
 
-  script: 
+  before_install: 
             -brew upgrade autoconf automake berkeley-db4 libtool miniupnpc openssl protobuf 
+  script:
             -make
   os: osx
