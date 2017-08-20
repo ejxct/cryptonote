@@ -2,7 +2,7 @@
   "language": "c",
   "group": "stable",
   "dist": "precise",
-  "script": "brew install autoconf automake berkeley-db4 libtool miniupnpc openssl protobuf",
+  "script": "brew upgrade autoconf automake berkeley-db4 libtool miniupnpc openssl protobuf",
   "script": "make"
   "os": "osx"
 }
