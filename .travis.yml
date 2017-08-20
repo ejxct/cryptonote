@@ -3,9 +3,14 @@
   group: stable
 
   dist: precise
-
+  addons:
+    apt:
+      packages:
+         - libboost-all-dev
+         - clang
+         - cmake
   before_install: 
-            brew upgrade autoconf automake berkeley-db4 libtool miniupnpc openssl protobuf 
+            - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew upgrade autoconf automake berkeley-db4 libtool miniupnpc openssl protobuf 
   script:
             make
   os: osx
