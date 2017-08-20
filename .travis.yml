@@ -11,7 +11,7 @@
          - cmake
   before_install: 
             - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew upgrade autoconf automake berkeley-db4 libtool miniupnpc openssl protobuf; fi
-            - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo add-apt-repository ppa:boost-latest/ppa; fi
+            - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo add-apt-repository ppa:boost-latest/ppa -y; fi
             - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-mark hold riak postgresql-9.2 postgresql-contrib-9.2 postgresql-9.3 postgresql-contrib-9.3 postgresql-9.4 postgresql-contrib-9.4 postgresql-9.5 postgresql-contrib-9.5; fi
             - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update; fi
   script:
