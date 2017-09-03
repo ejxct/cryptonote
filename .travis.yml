@@ -22,4 +22,4 @@
             make
   os: 
      - osx
-     - linux
+     #- linux
